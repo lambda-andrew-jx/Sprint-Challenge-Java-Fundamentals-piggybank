@@ -10,8 +10,16 @@ public class Main {
         Coin nickle = new Coin(0.05);
         Coin penny = new Coin(0.01);
 
-        System.out.println("The value of a dollar is " + dollar.getValue());
-        System.out.println("The value of a quarter is " + dime.getValue());
+        // System.out.println("The value of a dollar is " + dollar.getValue());
+        // System.out.println("The value of a quarter is " + dime.getValue());
+
+        PiggyBank = new PiggyBank();
+
+        double value = pb.getMoney();
+
+        int numcoins = pb.getNumberOfCoins();
+
+        System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
     }
 }
 
