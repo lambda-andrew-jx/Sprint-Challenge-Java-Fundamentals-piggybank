@@ -6,7 +6,7 @@ public class PiggyBank
 {
     private ArrayList<Coin> coinList = new ArrayList<>();
 
-    public int getNumberOfCoins()
+    public int getNumOfCoins()
     {
         return coinList.size();
     }

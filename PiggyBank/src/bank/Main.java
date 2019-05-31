@@ -15,11 +15,14 @@ public class Main {
 
         PiggyBank = new PiggyBank();
 
+        pb.addCoins(10, quarter);
+        pb.addCoins(5, penny);
+
         double value = pb.getMoney();
 
-        int numcoins = pb.getNumberOfCoins();
+        int numcoins = pb.getNumOfCoins();
 
-        System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
+        // System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
     }
 }
 

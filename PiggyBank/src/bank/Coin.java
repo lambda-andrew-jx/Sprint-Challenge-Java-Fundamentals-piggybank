@@ -11,4 +11,14 @@ public class Coin
     {
         return this.value;
     }
+    public int addCoins(int num, Coin c)
+    {
+        int added = 0;
+        while (added < num)
+        {
+            coinList.add(c.getValue());
+            added++;
+        }
+        return added;
+    }
 }
