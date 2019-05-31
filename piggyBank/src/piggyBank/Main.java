@@ -17,35 +17,40 @@ public class Main
         {
             total += c.getTotal();
         }
-        System.out.println("The piggy bank holds " +fp.format(total));
+        System.out.println("The piggy bank holds " +fp.format(total/100));
     }
 
-    public static void removeCoins(ArrayList<CoinAbstract> bank, double amount) {
+    public static void removeCoins(ArrayList<CoinAbstract> bank, int amount) {
+        DecimalFormat fp = new DecimalFormat("$###,###.00");
+        
+        double total = 0;
 
-        Collections.sort(bank, new Comparator<CoinAbstract>() {
-            @Override
-            public int compare(CoinAbstract c1, CoinAbstract c2) {
-                return Double.compare(c2.getValue(), c1.getValue());
-            }
-        });
+        for (CoinAbstract c : bank)
+        {
+            total += c.getTotal();
+        }
 
-        System.out.println("\n&&&Test&&&");
-        bank.forEach((c) -> System.out.println(c.getTotal()));
-        System.out.println("&&&EndTest&&&\n");
+        if (amount > total) {
+            System.out.println("\nYou're trying to remove too much money\n");
+            System.out.println("The piggy bank holds " +fp.format(total/100));
+        } else {
+            bank.sort((c1, c2) -> c2.getValue() - c1.getValue());
 
-        for (Iterator<CoinAbstract> itr = bank.iterator(); itr.hasNext();) {
-            CoinAbstract coin = itr.next();
-            System.out.println(coin);
-            if ((coin.getAmount() * coin.getValue()) < amount) {
-                amount -= (coin.getAmount() * coin.getValue());
-                itr.remove();
-                System.out.println(amount);
-            } else if (coin.getValue() <= amount) {
-                if (coin.getAmount() > 0) { //avoid infinite loops hopefully
-                    while ((coin.getAmount()*coin.getValue()) > amount && coin.getValue() <= amount) {
-                        int initialAmount = coin.getAmount();
-                        coin.setAmount(initialAmount - 1);
-                        amount -= coin.getValue();
+            for (Iterator<CoinAbstract> itr = bank.iterator(); itr.hasNext();) {
+                CoinAbstract coin = itr.next();
+                // System.out.println(coin);
+
+                if ((coin.getAmount() * coin.getValue()) < amount) {
+                    amount -= (coin.getAmount() * coin.getValue());
+                    itr.remove();
+                    // System.out.println(amount);
+                } else if (coin.getValue() <= amount) {
+                    if (coin.getAmount() > 0) { //avoid infinite loops hopefully
+                        while ((coin.getAmount()*coin.getValue()) > amount && coin.getValue() <= amount) {
+                            int initialAmount = coin.getAmount();
+                            coin.setAmount(initialAmount - 1);
+                            amount -= coin.getValue();
+                        }
                     }
                 }
             }
@@ -70,7 +75,7 @@ public class Main
         printTotal(piggyBank);
 
         System.out.println("\n*** Trying to remove coins ***");
-        removeCoins(piggyBank, 1.20);
+        removeCoins(piggyBank, 164);
         
         System.out.println("\n*** Printing Coins ***");
         piggyBank.forEach((c) -> System.out.println(c));

@@ -7,12 +7,12 @@ public class Nickel extends CoinAbstract
         super(amount);
         
         setName("Nickel");
-        setValue(0.05);
+        setValue(5);
     }
 
     public Nickel()
     {
         setName("Nickel");
-        setValue(0.05);
+        setValue(5);
     }
 }

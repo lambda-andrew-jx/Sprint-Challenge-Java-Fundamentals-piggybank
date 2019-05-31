@@ -3,7 +3,7 @@ package piggyBank;
 public abstract class CoinAbstract
 {
     private String name;
-    private double value;
+    private int value;
     private int amount;
 
     public CoinAbstract()
@@ -16,7 +16,7 @@ public abstract class CoinAbstract
         this.amount = amount;
     }
 
-    public double getTotal() {
+    public int getTotal() {
         return this.value * this.amount;
     }
 
@@ -28,11 +28,11 @@ public abstract class CoinAbstract
         this.name = name;
     }
 
-    public double getValue() {
+    public int getValue() {
         return this.value;
     }
 
-    public void setValue(double value) {
+    public void setValue(int value) {
         this.value = value;
     }
 

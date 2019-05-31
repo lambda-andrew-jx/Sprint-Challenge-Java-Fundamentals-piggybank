@@ -7,12 +7,12 @@ public class Penny extends CoinAbstract
         super(amount);
         
         setName("Penny");
-        setValue(0.01);
+        setValue(1);
     }
 
     public Penny()
     {
         setName("Penny");
-        setValue(0.01);
+        setValue(1);
     }
 }

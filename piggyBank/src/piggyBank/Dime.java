@@ -7,12 +7,12 @@ public class Dime extends CoinAbstract
         super(amount);
         
         setName("Dime");
-        setValue(0.10);
+        setValue(10);
     }
 
     public Dime()
     {
         setName("Dime");
-        setValue(0.10);
+        setValue(10);
     }
 }

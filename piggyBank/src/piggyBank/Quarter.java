@@ -7,12 +7,12 @@ public class Quarter extends CoinAbstract
         super(amount);
         
         setName("Quarter");
-        setValue(0.25);
+        setValue(25);
     }
 
     public Quarter()
     {
         setName("Quarter");
-        setValue(0.25);
+        setValue(25);
     }
 }

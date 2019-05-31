@@ -7,12 +7,12 @@ public class Dollar extends CoinAbstract
         super(amount);
         
         setName("Dollar");
-        setValue(1.00);
+        setValue(100);
     }
 
     public Dollar()
     {
         setName("Dollar");
-        setValue(1.00);
+        setValue(100);
     }
 }
