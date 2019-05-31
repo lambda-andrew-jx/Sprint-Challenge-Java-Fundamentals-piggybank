@@ -36,7 +36,17 @@ public abstract class CoinAbstract
         this.value = value;
     }
 
-    public String getAmount() {
+    public int getAmount() {
+        return this.amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    @Override
+    public String toString()
+    {
         if (this.name == "Dollar") {
             return "$" + this.amount;
         }
@@ -55,15 +65,5 @@ public abstract class CoinAbstract
         {
             return this.amount + " " + this.name;
         }
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    @Override
-    public String toString()
-    {
-        return getAmount();
     }
 }
