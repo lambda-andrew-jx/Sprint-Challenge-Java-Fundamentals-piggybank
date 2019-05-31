@@ -1,7 +1,11 @@
 package piggybank;
 
+import java.text.DecimalFormat;
+
 public abstract class Coin 
 {
+  static DecimalFormat fp = new DecimalFormat("$###,###.00");
+
   private String name;
   private double value;
   int quantity;
@@ -21,5 +25,11 @@ public abstract class Coin
   public double getTotal() 
   {
       return this.value * this.quantity;
+  }
+
+  @Override
+  public String toString()
+  {
+      return "The piggy bank holds " + fp.format(getTotal());
   }
 }
