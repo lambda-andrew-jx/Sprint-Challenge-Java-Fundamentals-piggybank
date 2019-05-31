@@ -22,7 +22,7 @@ public class Main {
         PiggyBank pb = new PiggyBank();
 
         pb.addCoins(1, quarter);
-        pb.addCoins(7, dime);
+        pb.addCoins(1, dime);
         pb.addCoins(5, dollar);
         pb.addCoins(3, nickle);
         pb.addCoins(7, dime);
@@ -32,12 +32,13 @@ public class Main {
 
 
         double value = pb.getMoney();
+        // System.out.println(pb.getMoney());
 
         int numcoins = pb.getNumOfCoins();
 
         System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
 
-        System.out.println("The piggy bank holds " + fp.format(sum));
+        System.out.println("The piggy bank holds " + fp.format(pb.getMoney()));
     }
 }
 
