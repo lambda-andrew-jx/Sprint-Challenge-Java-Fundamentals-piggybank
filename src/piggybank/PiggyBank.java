@@ -2,14 +2,14 @@ package piggybank;
 
 public   abstract class PiggyBank
 {
-  public int value;
-  public string name;
+  public double value;
+  public String name;
   public int quantity;
 
   public abstract addMoney();
 
-  public string getTotal()
+  public double getTotal()
   {
-    return quantity;
+    return value;
   }
 }
