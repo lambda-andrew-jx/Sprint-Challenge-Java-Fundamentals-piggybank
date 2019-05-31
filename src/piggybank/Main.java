@@ -19,6 +19,6 @@ public class Main
         piggyBank.add(new Penny(10));
         piggyBank.forEach((c) -> c.getCoinCount());
         System.out.println(piggyBank.toString());
-        System.out.println("The piggy bank holds $7.30");
+        System.out.println("The piggy bank holds $7.30" + piggyBank.Quarter.getvalue);
     }
 }
