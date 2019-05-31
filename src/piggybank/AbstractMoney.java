@@ -1,17 +1,27 @@
 package piggybank;
-public abstract class AbstractMoney{
+
+public abstract class AbstractMoney {
     protected double value;
     protected int quantity;
-
-    public AbstractMoney( int quantity) {
+    protected String name;
+    public AbstractMoney(int quantity) {
         this.quantity = quantity;
     }
 
+    public AbstractMoney() {
+        quantity = 1;
+    }
+
+    public void getCoin()
+    {
+        System.out.println(quantity + " " + name);
+    }
     /**
      * @return the value
      */
     public double getValue() {
-        return value*quantity;
+
+        return value * quantity;
     }
 
     /**
@@ -35,6 +45,4 @@ public abstract class AbstractMoney{
         this.quantity = quantity;
     }
 
-  
-    
 }
