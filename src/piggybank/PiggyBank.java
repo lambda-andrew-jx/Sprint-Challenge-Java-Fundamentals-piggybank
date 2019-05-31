@@ -12,6 +12,20 @@ public class PiggyBank
 
   public void add(Cash amount) 
   {
-   
+    String type = amount.getType();
+
+    if (!cash.containsKey(type)) 
+    {
+      cash.put(type, 0);
+    }
+    
+    cash.put(type, cash.get(type) + amount.getCount());
+    total += amount.getCashCount();
+
+    System.out.println(amount.toString());
+  }
+  public String getCash() 
+  {
+    return "My piggy bank has " + fp.format(total);
   }
 }
