@@ -17,7 +17,9 @@ public class Main
         piggyBank.add(new Dime(7));
         piggyBank.add(new Dollar(1));
         piggyBank.add(new Penny(10));
+        piggyBank.forEach((c) -> c.getCoinCount());
         System.out.println(piggyBank.toString());
+        
        
         // ArrayList<Coin> piggyBankArrayList = new ArrayList<Coin>();
         // piggyBankArrayList.add(new Quarter(1));

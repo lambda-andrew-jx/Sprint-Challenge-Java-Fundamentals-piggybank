@@ -22,6 +22,10 @@ public abstract class Coin
   {
       return this.value;
   }
+  public void getCoinCount()
+  {
+      System.out.println(quantity + " " + name);
+  }
   public double getTotal() 
   {
       return this.value * this.quantity;
