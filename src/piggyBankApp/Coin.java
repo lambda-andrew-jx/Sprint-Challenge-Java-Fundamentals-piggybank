@@ -19,7 +19,7 @@ public abstract class Coin {
 
 	public String getName() { return name; }
 
-	public double getValue() { return value; }
+	public double getValue() { return value * quantity; }
 
 	public double getQuantity() { return quantity; }
 
