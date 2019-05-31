@@ -1,25 +1,20 @@
 package piggybank;
 
 public class Penny extends PiggyBank
-{
-   private static double defValue = 0.01;
+{    
+   
+       public Penny(int quantity)
+       {
+           super(quantity);
 
-   public Penny(String name, int quantity)
-   {
-       value = defValue;
+           setName("Penny");
+           setValue(0.01);
+       }
 
-       this.name = name;
-       this.quantity = quantity;
-   }
-
-   public double getTotal()
-   {
-       return(value * quantity);
-   }
-
-   @Override
-   public String toString()
-   {
-       return "Yoy have $" + value;
-   }
+       public Penny()
+       {
+           setName("Penny");
+           setValue(0.01);
+       }
+   
 }

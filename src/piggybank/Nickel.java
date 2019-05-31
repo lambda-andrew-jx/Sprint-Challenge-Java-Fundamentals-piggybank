@@ -1,25 +1,20 @@
 package piggybank;
 
 public class Nickel extends PiggyBank
-{
-   private static double defValue = 0.05;
+{    
+   
+       public Nickel(int quantity)
+       {
+           super(quantity);
 
-   public Nickel(String name, int quantity)
-   {
-       value = defValue;
+           setName("Nickel");
+           setValue(0.05);
+       }
 
-       this.name = name;
-       this.quantity = quantity;
-   }
-
-   public double getTotal()
-   {
-       return(value * quantity);
-   }
-
-   @Override
-   public String toString()
-   {
-       return "Yoy have $" + value;
-   }
+       public Nickel()
+       {
+           setName("Nickel");
+           setValue(0.05);
+       }
+   
 }

@@ -1,25 +1,20 @@
 package piggybank;
 
 public class Dollar extends PiggyBank
-{
-   private static double defValue = 1.0;
+{    
+   
+       public Dollar(int quantity)
+       {
+           super(quantity);
 
-   public Dollar(String name, int quantity)
-   {
-       value = defValue;
+           setName("Dollar");
+           setValue(1.00);
+       }
 
-       this.name = name;
-       this.quantity = quantity;
-   }
-
-   public double getTotal()
-   {
-       return(value * quantity);
-   }
-
-   @Override
-   public String toString()
-   {
-       return "Yoy have $" + value;
-   }
+       public Dollar()
+       {
+           setName("Dollar");
+           setValue(1.00);
+       }
+   
 }

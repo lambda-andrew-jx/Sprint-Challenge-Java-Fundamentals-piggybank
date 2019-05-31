@@ -1,25 +1,20 @@
 package piggybank;
 
 public class Quarter extends PiggyBank
-{
-   private static double defValue = 0.25;
+{    
+   
+       public Quarter(int quantity)
+       {
+           super(quantity);
 
-   public Quarter(String name, int quantity)
-   {
-       value = defValue;
+           setName("Quarter");
+           setValue(0.25);
+       }
 
-       this.name = name;
-       this.quantity = quantity;
-   }
-
-   public double getTotal()
-   {
-       return(value * quantity);
-   }
-
-   @Override
-   public String toString()
-   {
-       return "Yoy have $" + value;
-   }
+       public Quarter()
+       {
+           setName("Quarter");
+           setValue(0.25);
+       }
+   
 }
