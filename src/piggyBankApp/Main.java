@@ -12,25 +12,50 @@ public class Main {
 	public static void printCoins() {
 		System.out.println("\n***Coins***");
 		for (Coin coin : piggyBank) {
-			System.out.println(coin + 
-				((coin.getQuantity() > 1) ? "s" : "") // More than one coin
-			);
+			System.out.println(coin);
 		}
 		System.out.println(""); // new line
-	}
+	}// printCoins
 
 	// Print total value
 	public static void printValue() {
 		double totalValue = 0;
 		for (Coin coin : piggyBank) {
-			totalValue += coin.getValue();
+			totalValue += coin.getTotalValue();
 		}
 		System.out.println("The piggy bank holds " + fp.format(totalValue) + "\n");
-	}
+	}// printValue
 
+	// Remove Coin
 	public static void removeCoin(Coin coin, int quantity) {
-		if ( )
-	}
+    System.out.println("***Remove Coins***");
+
+		int coinsInPB = 0;
+		for (Coin piggyCoin : piggyBank) {
+      if (piggyCoin.getName().equals(coin.getName())) {
+        coinsInPB += piggyCoin.getQuantity();
+      }
+    }
+
+    if(coinsInPB >= quantity) {
+    	int i = 0;
+			for (Coin piggyCoin : piggyBank) {
+	    	if (piggyCoin.getName().equals(coin.getName())) {
+	    		piggyBank.set(i, new Coin(coin.getName(), coin.getValue(), 0));
+	    		// piggyBank.remove(i);
+	    	} 
+	    	i++;
+	    }
+
+    	int coinsLeft = (coinsInPB - quantity);
+	    if (coinsLeft != 0) piggyBank.add(new Coin(coin.getName(), coin.getValue(), coinsLeft));
+
+    	System.out.println(quantity + " " + coin.getName() + "s removed");
+    	printValue();
+    } else {
+    	System.out.println("There are only " + coinsInPB + " " + coin.getName() + "s in the piggy bank.");
+    }
+	}// removeCoin
 
 	public static void main(String[] args) {
 		piggyBank = new ArrayList<Coin>();
@@ -45,5 +70,7 @@ public class Main {
 
 		printCoins();
 		printValue();
+		removeCoin(new Dime(), 2);
+		printCoins();
 	}
 }

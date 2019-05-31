@@ -1,6 +1,6 @@
 package piggyBankApp;
 
-public abstract class Coin {
+public class Coin {
 	private String name;
 	private double value;
 	private int quantity;
@@ -19,13 +19,17 @@ public abstract class Coin {
 
 	public String getName() { return name; }
 
-	public double getValue() { return value * quantity; }
+	public double getValue() { return value; }
 
 	public double getQuantity() { return quantity; }
+	
+	public double getTotalValue() { return value * quantity; }
 
 	@Override
   public String toString()
   {
-    return quantity + " " + name;
+    return quantity + " " + name + (
+    	(quantity > 1) ? "s" : ""
+    );
   }
 }
