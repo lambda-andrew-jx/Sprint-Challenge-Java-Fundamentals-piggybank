@@ -25,7 +25,16 @@ public class PiggyBank
     {
         for (Coin c : coinList)
         {
-            System.out.println(c.getNum() + " " + c.getName());
+            if (c.getName().equals ("dollar")) {
+                System.out.println("$ " + c.getNum());
+            }else
+            {
+                if (c.getNum() > 1) {
+                    System.out.println(c.getNum() + " " + c.getName() + "s");
+                }else
+                System.out.println(c.getNum() + " " + c.getName());
+            }
+
         }
     }
 
