@@ -29,6 +29,10 @@ public class Main
             }
         });
 
+        System.out.println("\n&&&Test&&&");
+        bank.forEach((c) -> System.out.println(c.getTotal()));
+        System.out.println("&&&EndTest&&&\n");
+
         for (Iterator<CoinAbstract> itr = bank.iterator(); itr.hasNext();) {
             CoinAbstract coin = itr.next();
             System.out.println(coin);
