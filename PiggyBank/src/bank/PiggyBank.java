@@ -20,5 +20,17 @@ public class PiggyBank
         }
         return sum;
     }
+
+    public int addCoins(int num, Coin c)
+    {
+        int added = 0;
+        while (added < num)
+        {
+            added +=1;
+            coinList.add( c );
+        }
+        return added;
+
+    }
 }
 
