@@ -1,17 +1,11 @@
 package piggybank;
 
-public class Coin 
+public abstract class Coin 
 {
   private String name;
   private double value;
-  private int quantity;
+  int quantity;
 
-  public Coin(String name, double value, int quantity) 
-  {
-    this.type = type;
-    this.value = value;
-    this.quantity = quantity;
-  }
   public String getName()
   {
       return this.name;
