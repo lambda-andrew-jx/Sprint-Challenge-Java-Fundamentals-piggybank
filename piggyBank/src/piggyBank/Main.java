@@ -22,5 +22,11 @@ public class Main
         piggyBank.forEach((c) -> System.out.println(c));
 
         System.out.println("\n*** Piggy Bank Total ***");
+        double total = 0;
+        for (CoinAbstract c : piggyBank)
+        {
+            total += c.getTotal();
+        }
+        System.out.println("The piggy bank holds " +fp.format(total));
     }
 }
