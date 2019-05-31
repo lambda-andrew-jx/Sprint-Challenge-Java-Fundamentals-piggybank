@@ -23,5 +23,35 @@ public class Cash
     this.value = value;
     this.count = count;
   }
+  
+  public String getType() 
+  {
+    return type;
+  }
 
+  public double getValue() 
+  {
+    return value;
+  }
+
+  public int getCount() 
+  {
+    return count;
+  }
+
+  public double getCashCount() 
+  {
+    return value * count;
+  }
+
+  public String getString() 
+  {
+    return fp.format(value * count);
+  }
+
+  @Override
+  public String toString() 
+  {
+  return count + " " + type;
+  }
 }
