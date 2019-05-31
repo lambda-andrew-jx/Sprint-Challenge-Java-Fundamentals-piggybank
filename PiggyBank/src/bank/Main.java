@@ -29,14 +29,19 @@ public class Main {
         pb.addCoins(1, dollar);
         pb.addCoins(10, penny);
 
-
+        System.out.println(quarter + "Quarters");
+        System.out.println(dime + "Dimes");
+        System.out.println(quarter + "Dollars");
+        System.out.println(quarter + "Nickles");
+        System.out.println(quarter + "Dollars");
+        System.out.println(quarter + "Pennies");
 
         double value = pb.getMoney();
         // System.out.println(pb.getMoney());
 
         int numcoins = pb.getNumOfCoins();
 
-        System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
+        // System.out.printf("Coin=%d, Value=%2f\n", numcoins, value);
 
         System.out.println("The piggy bank holds " + fp.format(pb.getMoney()));
     }
