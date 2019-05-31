@@ -5,28 +5,35 @@ import java.text.DecimalFormat;
 
 public class Main {
 
-	public static DecimalFormat fp = new DecimalFormat("$###,###.00");
+	private static List<Coin> piggyBank;
+	public static final DecimalFormat fp = new DecimalFormat("$###,###.00");
 
 	// Print coins
-	public static void printCoins(List<Coin> piggyBank) {
+	public static void printCoins() {
 		System.out.println("\n***Coins***");
 		for (Coin coin : piggyBank) {
-			System.out.println(coin);
+			System.out.println(coin + 
+				((coin.getQuantity() > 1) ? "s" : "") // More than one coin
+			);
 		}
 		System.out.println(""); // new line
 	}
 
-	// Pint total value
-	public static void printValue(List<Coin> piggyBank) {
+	// Print total value
+	public static void printValue() {
 		double totalValue = 0;
 		for (Coin coin : piggyBank) {
 			totalValue += coin.getValue();
 		}
-		System.out.println("The piggy bank holds " + fp.format(totalValue));
+		System.out.println("The piggy bank holds " + fp.format(totalValue) + "\n");
+	}
+
+	public static void removeCoin(Coin coin, int quantity) {
+		if ( )
 	}
 
 	public static void main(String[] args) {
-		List<Coin> piggyBank = new ArrayList<Coin>();
+		piggyBank = new ArrayList<Coin>();
 
 		piggyBank.add(new Quarter());
 		piggyBank.add(new Dime());
@@ -36,7 +43,7 @@ public class Main {
 		piggyBank.add(new Dollar());
 		piggyBank.add(new Penny(10));
 
-		printCoins(piggyBank);
-		printValue(piggyBank);
+		printCoins();
+		printValue();
 	}
 }
