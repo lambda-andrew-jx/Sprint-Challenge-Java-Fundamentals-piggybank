@@ -6,9 +6,9 @@ public abstract class Coin
 {
   static DecimalFormat fp = new DecimalFormat("$###,###.00");
 
-  private String name;
-  private double value;
-  int quantity;
+  protected String name;
+  protected double value;
+  protected int quantity;
 
   public String getName()
   {
