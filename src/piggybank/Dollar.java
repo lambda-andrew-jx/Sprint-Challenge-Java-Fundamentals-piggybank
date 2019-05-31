@@ -14,4 +14,9 @@ public class Dollar extends Cash
   {
     super(type, value, count);
   }
+    @Override
+  public String toString() 
+  {
+    return super.getString();
+  }
 }
