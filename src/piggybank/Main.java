@@ -10,9 +10,18 @@ public class Main
     {
         System.out.println("*** MAGICAL PIGGY BANK ***");
         ArrayList<Coin> piggyBank = new ArrayList<Coin>();
-        piggyBank.add(new Quarter(2));
+        piggyBank.add(new Quarter(1));
+        piggyBank.add(new Dime(1));
+        piggyBank.add(new Dollar(5));
+        piggyBank.add(new Nickel(3));
+        piggyBank.add(new Dime(7));
+        piggyBank.add(new Dollar(1));
+        piggyBank.add(new Penny(10));
+        System.out.println(new Dime(2).toString());
+       
         // ArrayList<Coin> piggyBankArrayList = new ArrayList<Coin>();
         // piggyBankArrayList.add(new Quarter(1));
-        System.out.println(piggyBank);
+        System.out.println("test123");
+   
     }
 }
