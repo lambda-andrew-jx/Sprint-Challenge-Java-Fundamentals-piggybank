@@ -3,48 +3,78 @@ import java.util.*;
 
 public abstract class Money
 {
-
     private String name;
     private double value;
-    private int amountStored;
-    private int originalDeposit;
+    private int quantity;
 
-    public void setValues(String name, double value, int amountStored, int originalDeposit)
+    public Money()
     {
-        this.name = name;
-        this.value = value;
-        this.amountStored = amountStored;
-        this.originalDeposit = originalDeposit;
+        this.quantity = 1;
     }
 
-    public double tally()
+    public Money(int quantity)
     {
-        return this.value * this.amountStored;
-    };
-
-    public int getAmountStored()
-    {
-        return amountStored;
+        this.quantity = quantity;
     }
 
-    public void setAmountStored(int amountStored)
+    public double getValue()
     {
-        this.amountStored = amountStored;
+        return this.value;
+    }
+
+    public double getTotal()
+    {
+        return this.value * this.quantity;
     }
 
     public String getName()
     {
-        return name;
+        return this.name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setValue(double value)
+    {
+        this.value = value;
+    }
+
+    public String getQuantities()
+    {
+        if(this.name == "Dollar")
+        {
+            return "$" + this.quantity;
+        }
+        else if(this.quantity > 1)
+        {
+            if(this.name == "Penny")
+            {
+                return this.quantity + " Pennies";
+            }
+            else
+            {
+                return this.quantity + " " + this.name + "s";
+            }
+        }
+        else
+        {
+            return this.quantity + " " + this.name;
+        }
+    }
+
+    public void setQuantity(int quantity)
+    {
+        this.quantity = quantity;
     }
 
     @Override
     public String toString()
     {
-        if (amountStored > 1)
-        {
-            return "\n" + amountStored + " " + name + "'s";
-        } else {
-            return "\n" + amountStored + " " + name;
-        }
+        return getQuantities();
     }
+
+
 }
