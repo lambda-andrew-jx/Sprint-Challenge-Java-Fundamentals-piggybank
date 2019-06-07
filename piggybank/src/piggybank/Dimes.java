@@ -2,13 +2,19 @@ package piggybank;
 
 public class Dimes extends PiggyBank 
 {
-    private int Dimes(int dimes)
+    private int dimes;
+
+    public Dimes(int dimes)
     {
-        this.dimes =dimes;
+        this.dimes = dimes;
     }
     public Dimes()
     {
-        this.quarters = this.quarters + 1;
+        this.dimes = this.dimes + 1;
+    }
+    public double getValue()
+    {
+        return dimes * 0.10;
     }
 
     public String getName()

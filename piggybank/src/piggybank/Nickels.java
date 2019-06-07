@@ -1,6 +1,6 @@
 package piggybank;
 
-public class Nickels extends piggybank
+public class Nickels extends PiggyBank
 {
     private int nickels;
 
@@ -11,6 +11,10 @@ public class Nickels extends piggybank
     public Nickels()
     {
         this.nickels = this.nickels + 1;
+    }
+    public double getValue()
+    {
+        return nickels * 0.05;
     }
 
     public String getName()

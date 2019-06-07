@@ -1,6 +1,6 @@
 package piggybank;
 
-public class Quarters extends piggybank
+public class Quarters extends PiggyBank
 {
     private int quarters;
 
@@ -11,6 +11,10 @@ public class Quarters extends piggybank
     public Quarters()
     {
         this.quarters = this.quarters + 1;
+    }
+    public double getValue()
+    {
+        return quarters * 0.25;
     }
 
     public String getName()
