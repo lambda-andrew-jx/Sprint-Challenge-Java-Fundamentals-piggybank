@@ -11,9 +11,9 @@ public class Main
 
 		double total = 0;
 
-		for (AbstractCoin c : bank)
+		for (AbstractCoin coin : bank)
 		{
-			total += c.getTotal();
+			total += coin.getTotal();
 		}
 
 		System.out.println("The piggy bank has " + fp.format(total/100));
@@ -24,10 +24,20 @@ public class Main
 
 		piggybank.add(new Quarter());
 		piggybank.add(new Dime());
+		piggybank.add(new Dollar(5));
+		piggybank.add(new Nickel(3));
+		piggybank.add(new Dime(7));
 		piggybank.add(new Dollar());
-		piggybank.add(new Nickel());
-		piggybank.add(new Dime());
-		piggybank.add(new Dollar());
-		piggybank.add(new Penny());
+		piggybank.add(new Penny(10));
+
+		System.out.println("****** Deposits ******");
+		piggybank.forEach((coin) -> System.out.println(coin));
+
+		System.out.println();
+
+		System.out.println("****** Piggy Bank Total ******");
+		printTotal(piggybank);
+
+		System.out.println();
 	}
 }
