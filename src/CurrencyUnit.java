@@ -5,14 +5,17 @@ public abstract class CurrencyUnit {
     private double value;
     private int quantity;
 
-    public CurrencyUnit(String name, String pluralName, double value, int quantity) {
+    public CurrencyUnit(String name, String pluralName, double value, int quantity, String alternativeCreationString) {
         this.name = name;
         this.pluralName = pluralName;
         this.value = value;
         this.quantity = quantity;
 
-
-        System.out.println(this.quantity + " " + (this.quantity > 1 ? this.pluralName : this.name));
+        if (alternativeCreationString != null) {
+            System.out.println(alternativeCreationString);
+        } else {
+            System.out.println(this.quantity + " " + (this.quantity > 1 ? this.pluralName : this.name));
+        }
     }
 
     public double getTotalValue() {
