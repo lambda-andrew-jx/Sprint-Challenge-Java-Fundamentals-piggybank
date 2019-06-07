@@ -1,0 +1,18 @@
+package PiggyBank;
+
+public class Quarter extends CoinAbstract
+{
+    public Quarter(int amount)
+    {
+        super(amount);
+
+        setName("Quarter");
+        setValue(25);
+    }
+
+    public Quarter()
+    {
+        setName("Quarter");
+        setValue(25);
+    }
+}
