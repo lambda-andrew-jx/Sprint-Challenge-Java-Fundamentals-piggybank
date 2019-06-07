@@ -11,7 +11,9 @@ public class Main {
 
     public static void main(String[] args)
     {
+//        start arraylist
         ArrayList<Money> piggyBank = new ArrayList<>();
+//        Add each instance of the money
         piggyBank.add(new Quarter());
         piggyBank.add(new Dime());
         piggyBank.add(new Dollar(5));
@@ -20,13 +22,15 @@ public class Main {
         piggyBank.add(new Dollar());
         piggyBank.add(new Penny(10));
 
-
+// looping through each instance
         piggyBank.forEach(m -> System.out.println(m.total()));
-
+        System.out.println();
+//looping through to add the total amounts into one value
         for(Money m : piggyBank)
         {
             newCount = newCount + m.totalValue();
         }
+//        printing total amount here
         System.out.println("The Piggy Bank Holds: " + fp.format(newCount));
     }
 }
