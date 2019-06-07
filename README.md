@@ -1,4 +1,4 @@
-# Introduction
+# Introduction 
 
 This sprint challenge combines the knowledge from this week's Java Fundamentals lessons in order to create a Magical Piggy Bank using Java and the JDK.
 
