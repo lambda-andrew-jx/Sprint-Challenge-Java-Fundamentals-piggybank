@@ -81,5 +81,18 @@ public class Main
 		printTotal(piggybank);
 
 		System.out.println();
+
+		System.out.println("****** Maybe Removing Coins ******");
+		removeCoins(piggybank, 150);
+
+		System.out.println();
+
+		System.out.println("****** Remaining Coins ******");
+		piggybank.forEach((coin) -> System.out.println(coin));
+
+		System.out.println();
+
+		System.out.println("****** Remaining Total ******");
+		printTotal(piggybank);
 	}
 }
