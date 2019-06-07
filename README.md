@@ -1,3 +1,13 @@
+# Terminal Printout
+1 Quarter
+1 Dime
+$5
+3 Nickels
+7 Dimes
+$1
+10 Pennies
+The Piggy Bank Holds: $7.30 
+
 # Introduction
 
 This sprint challenge combines the knowledge from this week's Java Fundamentals lessons in order to create a Magical Piggy Bank using Java and the JDK.
